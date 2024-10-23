@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dadeyjtyv2biu"]
+
+[ext_resource type="Script" path="res://Controller.gd" id="1_xn0xc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o31jx"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_xn0xc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_o31jx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera3D"]
+
+[node name="Label" type="Label" parent="Camera3D/CanvasLayer"]
+offset_right = 382.0
+offset_bottom = 135.0
+text = "hello"

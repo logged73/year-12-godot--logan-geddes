@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b324wdjdkpoci"]
+
+[ext_resource type="PackedScene" path="res://fpscontroller.tscn" id="1_xrb47"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_31bp2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wmsfl"]
+
+[node name="test world" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.70004, 0, 0, 0, 2.30737, 0, 0, 0, -9.84889, 0, -1.85831, 0)
+mesh = SubResource("BoxMesh_31bp2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_wmsfl")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_xrb47")]

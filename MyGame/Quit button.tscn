@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://k8rg4k8ysafy"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 1036.0
+offset_right = 1107.0
+offset_bottom = 31.0
+scale = Vector2(1.64, 3.28)
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"

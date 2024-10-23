@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx0wvth1jdoeg"]
+
+[ext_resource type="Script" path="res://enime.gd" id="1_twf5i"]
+[ext_resource type="Texture2D" uid="uid://d2ms8of0pl75v" path="res://textures/ghost.png" id="2_xahim"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oi5i5"]
+radius = 0.542776
+height = 2.02076
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmyom"]
+albedo_texture = ExtResource("2_xahim")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3s1xq"]
+
+[node name="stalker" type="CharacterBody3D" groups=["Enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0375438, 0)
+script = ExtResource("1_twf5i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_oi5i5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2013, 0, 0, 0, 1.03071, 0, 0, 0, -0.999121, 0.0268031, 0.014734, 0)
+material_override = SubResource("StandardMaterial3D_xmyom")
+mesh = SubResource("CapsuleMesh_3s1xq")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

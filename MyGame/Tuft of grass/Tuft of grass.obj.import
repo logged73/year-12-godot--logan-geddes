@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://blwchh17dif8c"
+path="res://.godot/imported/Tuft of grass.obj-bf0bfc018d7f0358753a437687c395ae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tuft of grass.obj-bf0bfc018d7f0358753a437687c395ae.mesh"]
+
+source_file="res://Tuft of grass/Tuft of grass.obj"
+dest_files=["res://.godot/imported/Tuft of grass.obj-bf0bfc018d7f0358753a437687c395ae.mesh", "res://.godot/imported/Tuft of grass.obj-bf0bfc018d7f0358753a437687c395ae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

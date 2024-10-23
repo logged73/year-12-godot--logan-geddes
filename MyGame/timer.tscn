@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ma3cfheepq8h"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_u8hsu"]
+[ext_resource type="Texture2D" uid="uid://cvpmkwexqu4xw" path="res://icon.svg" id="1_xa6tp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_u8hsu")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(79, 72)
+texture = ExtResource("1_xa6tp")
+
+[node name="FlashTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="FlashTimer" to="." method="_on_flash_timer_timeout"]

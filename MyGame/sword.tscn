@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://geei7d2lgl4f"]
+
+[ext_resource type="PackedScene" uid="uid://bdsgmbodebr2k" path="res://sword/sword_3.glb" id="1_ky5hl"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(-0.00655464, 0, -0.809368, 0, 0.809395, 0, 0.809368, 0, -0.00655464, 0, 0, 0)
+
+[node name="sword_3" parent="." instance=ExtResource("1_ky5hl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50976, 0, 0.255574)

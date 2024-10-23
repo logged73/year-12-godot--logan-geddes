@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://drkkb7214fvjo"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+size_flags_horizontal = 0
+text = "100.00"

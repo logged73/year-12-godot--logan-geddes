@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://buh252e1l63lh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pkkw0"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v4aui"]
+lifetime_randomness = 0.31
+emission_shape_scale = Vector3(5, 20, 5)
+emission_shape = 3
+emission_box_extents = Vector3(10, 0.5, 10)
+direction = Vector3(0, -1, 0)
+spread = 97.048
+angular_velocity_min = 15.0
+angular_velocity_max = 15.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_yn0vr"]
+max_value = 0.1
+_data = [Vector2(0.00485437, 0.00288235), 0.0, 0.0, 0, 0, Vector2(0.0889968, 0.0464706), 0.241789, 0.241789, 0, 0, Vector2(0.339806, 0.0801176), 0.0, 0.0, 0, 0, Vector2(1, 0.000205874), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i22c7"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.41, 0.403167, 1)
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_72kua"]
+material = SubResource("StandardMaterial3D_i22c7")
+curve = SubResource("Curve_yn0vr")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.352553, 0, 0, 0, 3.28298, 0, 0.819475, 0)
+mesh = SubResource("BoxMesh_pkkw0")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="MeshInstance3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.5223, 0)
+amount = 500
+speed_scale = 1.89
+explosiveness = 0.14
+visibility_aabb = AABB(-10, -21.2845, -31.164, 20, 42.5689, 50.328)
+trail_enabled = true
+trail_lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_v4aui")
+draw_pass_1 = SubResource("RibbonTrailMesh_72kua")
